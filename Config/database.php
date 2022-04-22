@@ -10,6 +10,7 @@ class DATABASE_CONFIG {
         'password' => {{ MYSQL_PASSWORD | str }},
         'database' => '{{ MYSQL_DATABASE }}',
         'prefix' => '',
+        'ssl_ca'  => '/var/www/MISP/rds-combined-ca-bundle.pem',
         'encoding' => 'utf8',
         'settings' => ['time_zone' => '"+00:00"'],
     ];

@@ -80,6 +80,8 @@ FROM misp
 # Hack that will force run verify stage
 COPY --from=verify /verified /
 
+COPY rds-combined-ca-bundle.pem /var/www/MISP
+
 ENV GNUPGHOME /var/www/MISP/.gnupg
 
 VOLUME /var/www/MISP/app/tmp/logs/
